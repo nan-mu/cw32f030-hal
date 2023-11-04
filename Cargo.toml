@@ -3,6 +3,7 @@ name = "cw32f030-hal"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
+description = "使用[svd2rust](https://docs.rs/svd2rust/latest/svd2rust/)工具生成的项目，计划在此基础上编写可用的hal库（非官方）"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
