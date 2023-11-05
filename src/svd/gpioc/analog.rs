@@ -1,0 +1,79 @@
+#[doc = "Register `ANALOG` reader"]
+pub type R = crate::svd::R<ANALOG_SPEC>;
+#[doc = "Register `ANALOG` writer"]
+pub type W = crate::svd::W<ANALOG_SPEC>;
+#[doc = "Field `PIN13` reader - desc PIN13"]
+pub type PIN13_R = crate::svd::BitReader;
+#[doc = "Field `PIN13` writer - desc PIN13"]
+pub type PIN13_W<'a, REG, const O: u8> = crate::svd::BitWriter<'a, REG, O>;
+#[doc = "Field `PIN14` reader - desc PIN14"]
+pub type PIN14_R = crate::svd::BitReader;
+#[doc = "Field `PIN14` writer - desc PIN14"]
+pub type PIN14_W<'a, REG, const O: u8> = crate::svd::BitWriter<'a, REG, O>;
+#[doc = "Field `PIN15` reader - desc PIN15"]
+pub type PIN15_R = crate::svd::BitReader;
+#[doc = "Field `PIN15` writer - desc PIN15"]
+pub type PIN15_W<'a, REG, const O: u8> = crate::svd::BitWriter<'a, REG, O>;
+impl R {
+    #[doc = "Bit 13 - desc PIN13"]
+    #[inline(always)]
+    pub fn pin13(&self) -> PIN13_R {
+        PIN13_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - desc PIN14"]
+    #[inline(always)]
+    pub fn pin14(&self) -> PIN14_R {
+        PIN14_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - desc PIN15"]
+    #[inline(always)]
+    pub fn pin15(&self) -> PIN15_R {
+        PIN15_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 13 - desc PIN13"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pin13(&mut self) -> PIN13_W<ANALOG_SPEC, 13> {
+        PIN13_W::new(self)
+    }
+    #[doc = "Bit 14 - desc PIN14"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pin14(&mut self) -> PIN14_W<ANALOG_SPEC, 14> {
+        PIN14_W::new(self)
+    }
+    #[doc = "Bit 15 - desc PIN15"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pin15(&mut self) -> PIN15_W<ANALOG_SPEC, 15> {
+        PIN15_W::new(self)
+    }
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.bits = bits;
+        self
+    }
+}
+#[doc = "desc ANALOG\n\nYou can [`read`](crate::svd::generic::Reg::read) this register and get [`analog::R`](R).  You can [`reset`](crate::svd::generic::Reg::reset), [`write`](crate::svd::generic::Reg::write), [`write_with_zero`](crate::svd::generic::Reg::write_with_zero) this register using [`analog::W`](W). You can also [`modify`](crate::svd::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ANALOG_SPEC;
+impl crate::svd::RegisterSpec for ANALOG_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`analog::R`](R) reader structure"]
+impl crate::svd::Readable for ANALOG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`analog::W`](W) writer structure"]
+impl crate::svd::Writable for ANALOG_SPEC {
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets ANALOG to value 0"]
+impl crate::svd::Resettable for ANALOG_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}
