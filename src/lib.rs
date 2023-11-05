@@ -2,15 +2,12 @@
 
 pub mod svd;
 
-#[no_mangle]
-static mut DEVICE_PERIPHERALS: bool = false;
-
 impl svd::Peripherals {
     #[doc = r"Returns all the peripherals *once*<br />返回外设操作对象，相当于初始化外设。在高级抽象中应当隐式地调用"]
     #[inline]
     pub fn take() -> Option<Self> {
         cortex_m::interrupt::free(|_| {
-            if unsafe { DEVICE_PERIPHERALS } {
+            if false {
                 None
             } else {
                 Some(unsafe { svd::Peripherals::steal() })
